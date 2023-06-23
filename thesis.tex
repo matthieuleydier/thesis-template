@@ -47,7 +47,10 @@
 %*************************************************************************
 % Bibliographies
 %*************************************************************************
-\addbibresource{bibliography.bib}
+%\usepackage[backend=biber,style=authoryear]{biblatex}
+%\addbibresource{references.bib}
+
+%\addbibresource{bibliography.bib}
 
 %*************************************************************************
 % Hyphenation
@@ -58,9 +61,10 @@
 % GO!GO!GO! MOVE IT!
 %*************************************************************************
 \begin{document}
+
 \frenchspacing
 \raggedbottom
-\selectlanguage{ngerman} % ngerman, american
+\selectlanguage{american} % ngerman, american
 %\renewcommand*{\bibname}{new name}
 %\setbibpreamble{}
 \pagenumbering{roman}
@@ -72,16 +76,14 @@
 \include{frontbackmatter/Titleback}
 %\cleardoublepage\include{frontbackmatter/Dedication}
 %\cleardoublepage\include{frontbackmatter/Foreword}
-\cleardoublepage\include{frontbackmatter/Declaration}
+%\cleardoublepage\include{frontbackmatter/Declaration}
 \condLOCK{\cleardoublepage\include{frontbackmatter/BlockingNotice}}
 \cleardoublepage\include{frontbackmatter/AbstractEN}
-\cleardoublepage\include{frontbackmatter/AbstractDE}
+%\cleardoublepage\include{frontbackmatter/AbstractEN}
 %\cleardoublepage\include{frontbackmatter/Publications}
-%\cleardoublepage\include{frontbackmatter/Acknowledgments}
+\cleardoublepage\include{frontbackmatter/Acknowledgments}
 \cleardoublepage\include{frontbackmatter/Contents}
-\cleardoublepage\include{frontbackmatter/Figures}
-\cleardoublepage\include{frontbackmatter/Tables}
-\cleardoublepage\include{frontbackmatter/Listings}
+%\cleardoublepage\include{frontbackmatter/Listings}
 \cleardoublepage\include{frontbackmatter/Acronyms}
 %*************************************************************************
 % Mainmatter
@@ -91,30 +93,32 @@
 \pagenumbering{arabic}
 % Alwas use \cleardoublepage before \part{...}.
 \cleardoublepage
-\part{Thesis}\label{pt:thesis}
+%\part{Thesis}\label{pt:thesis}
 \include{chapters/examples/chapter01}
 \include{chapters/examples/chapter02}
 \include{chapters/examples/chapter03}
-%*************************************************************************
-% Recommendations
-%*************************************************************************
-%\part{Empfehlungen zur Erstellung wissenschaftlicher Abschlussarbeiten}
-%\label{pt:recommendations}
-%*************************************************************************
-% Backmatter
-%*************************************************************************
+\include{chapters/examples/chapter04}
+\include{chapters/examples/chapter05}
+
+%*****************************************
+\newpage
+%\bibliographystyle{unsrt}
+\bibliographystyle{IEEEtran}
+\bibliography{references.bib}
+
+%\bibliography{IEEEabrv,mybibfile}
+
+%*
 \appendix
 %\renewcommand{\thechapter}{\alph{chapter}}
 \cleardoublepage
-\part{Appendix}
-\include{chapters/examples/appendix01}
-\include{chapters/examples/appendix02}
-%*************************************************************************
-% Other Stuff in the Back
-%*************************************************************************
-\cleardoublepage\include{frontbackmatter/Bibliography}
-%*************************************************************************
-% Game Over: Restore, Restart, or Quit?
-%*************************************************************************
+%\part{Appendix}
+\include{chapters/examples/appendix}
+
+%\cleardoublepage\include{frontbackmatter/Bibliography}
+
+\cleardoublepage\include{frontbackmatter/Figures}
+\cleardoublepage\include{frontbackmatter/Tables}
+
 \end{document}
 %*************************************************************************

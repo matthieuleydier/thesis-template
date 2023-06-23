@@ -1,29 +1,47 @@
-\chapter{Einleitung}
+\chapter{Introduction}
 \label{ch:intro}
-Lorem ipsum at nusquam appellantur his, labitur bonorum pri no \citep{dueck:trio}. His no decore nemore graecis. In eos meis nominavi, liber soluta vim cu. Sea commune suavitate interpretaris eu, vix eu libris efficiantur.
+
 
 %
 % Section: Motivation
-%
-\section{Motivation}
-\label{sec:intro:motivation}
-\graffito{Note: The content of this chapter is just some dummy text. It is not a real language.}
-Illo principalmente su nos. Non message \emph{occidental} angloromanic da. Debitas effortio simplificate sia se, auxiliar summarios da que, se avantiate publicationes via. Pan in terra summarios, capital interlingua se que. Al via multo esser specimen, campo responder que da. Le usate medical addresses pro, europa origine sanctificate nos se. Cras faucibus, leo ac adipiscing adipiscing, erat justo vulputate arcu, non sollicitudin ipsum dolor eget lectus. Nulla sed mi non ipsum varius consequat sit amet nec ipsum. Donec ac elit id nibh pretium pulvinar non ut ipsum. Integer congue iaculis augue ac porttitor. Suspendisse sed enim ac eros hendrerit adipiscing. Integer elit libero, lacinia vitae pharetra a, ullamcorper vitae metus. In tempor, est id imperdiet pulvinar, tellus nibh lacinia diam, a eleifend dui lectus non turpis.
+% The European Council for Nuclear Resear
 
-%
-% Section: Ziele
-%
-\section{Ziel der Arbeit}
-\label{sec:intro:goal}
-Ei choro aeterno antiopam mea, ut eos erant homero concludaturque. Albucius appellantur deterruisset id eam, vivendum partiendo dissentiet ei ius. Vis melius facilisis ea, sea id convenire referrentur, takimata adolescens ex duo. Ei harum argumentum per. Eam vidit exerci appetere ad, ut vel zzril intellegam interpretaris.
+The European Council for Nuclear Research (CERN) is one of the most important centres for scientific research in the field of particle physics \cite{TheCERN}. The Large Hadron Collider (LHC) is the currently biggest collider in the world regrouping four main experiments, namely CMS, ALICE, ATLAS, and LHCb. 
+The LHCb experiment studies the CP violation and has been built to measure the parameters of this violation. It also searches for rare decays or new physics phenomena. A scheme and a picture of LHCb is shown in Fig. \ref{fig:LHCb detector scheme +scifi}, where all the sub detectors are visible\footnote{(b): Visit of LHCb organised by the LPHE team on the $14^{th}$ of December, 2022.}.  
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{gfx/documentation/LHCb_scifi.jpeg}
+        \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{gfx/documentation/IMG_0942.jpeg}
+        \caption{}
+    \end{subfigure}
+    \caption{LHCb detector complex with the SciFi tracker encircled in red \cite{TheEPFL} (a) and photograph of LHCb (b).}
+    \label{fig:LHCb detector scheme +scifi}
+\end{figure}
+LHCb is made of several subdetectors, among them, the SciFi tracker made of 3 stations covering a total area of $340$ m$^2$ (see Fig. \ref{fig:scifitracker scheme}).
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{gfx/pictures/scifitracker.png}
+    \caption{SciFi tracker scheme from \cite{TripplDevelopmentLHCb}.}
+    \label{fig:scifitracker scheme}
+\end{figure}
+Each station is made of four planes oriented in different direction to obtain a spatial resolution up to \SI{100}{\micro m}. The planes are made of scintillating fibre mats. These fibres have a \SI{250}{\micro m} diameter and emit light from \SI{400}{\nano m} to \SI{600}{\nano m} with an emission peak at \SI{450}{\nano m}. SiPM arrays of \SI{250}{\micro m} summing up to $524$k channels  read out the light coming from the fibre mats. A cooling system allows to operate the SiPMs  at \SI{-40}{\celsius} in order to lower the noise due to intense radiations coming from LHC collisions. A detailed scheme shows the connection between the fibres and the SiPM in Fig. \ref{fig:fibre to sipm}.
 
-Errem omnium ea per, pro \ac{UML} congue populo ornatus cu, ex qui dicant nemore melius. No pri diam iriure euismod. Graecis eleifend appellantur quo id. Id corpora inimicus nam, facer nonummy ne pro, kasd repudiandae ei mei. Mea menandri mediocrem dissentiet cu, ex nominati imperdiet nec, sea odio duis vocent ei. Tempor everti appareat cu ius, ridens audiam an qui, aliquid admodum conceptam ne qui. Vis ea melius nostrum, mel alienum ac elit id nibh pretium pulvina euripidis eu.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{gfx/pictures/fibretosipm.png}
+    \caption{Scheme of the principle of the SciFi tracker. A particle hit creates photons within the fibre that are guided to the SiPM. The yellow squares represents the fired pixels the the SiPM. One can notice that there is not a one-to-one relation between a fibre and a channel (or pixel). \cite{KirnSciFi-ALHCb}.}
+    \label{fig:fibre to sipm}
+\end{figure}
+Over time, and especially for the next LHC upgrade, where the luminosity will be increased, radiations damage the fibre in the SciFi, resulting in less light coming to the SiPMs. One way of countering this damage is to enhance the SiPM PDE either using micro lenses\cite{TripplDevelopmentLHCb}, using other SiPMs with higher PDE or both. 
+A characterisation of SiPMs manufactured by the Foundation Bruno Kessler \cite{FBKKessler} is done to be used as a baseline for further R\&D about these SiPMs for the LHCb SciFi tracker.\\ 
+Throughout this semester, methods for measuring the quenching resistor, breakdown voltage, correlated noise, gain and photo-detection efficiency have been implemented and adjusted to the FBK detectors.\\
+\\
+This thesis will firstly go into details of the working principle of a SiPMs in chapter \ref{ch:background}, then the experimental method of each measurements will be presented in chapter \ref{ch:Experimental setup and methods} and this will be followed by the presentation of the results in chapter \ref{ch:Results}.
 
-Ei choro aeterno antiopam mea, labitur bonorum pri no. His no decore nemore graecis. In eos meis nominavi, liber soluta vim cu. Integer consectetur, mi congue feugiat rhoncus, ante libero consectetur eros, et interdum nulla velit non velit. Mauris pharetra venenatis porttitor. Suspendisse et risus at dui gravida hendrerit. Aenean auctor interdum sodales. Etiam tortor orci, scelerisque in gravida eu, varius a massa. Ut sem odio, commodo id pharetra eu, dictum vitae. 
 
-%
-% Section: Struktur der Arbeit
-%
-\section{Gliederung}
-\label{sec:intro:structure}
-Nulla fastidii ea ius, exerci suscipit instructior te nam, in ullum postulant quo. Congue quaestio philosophia his at, sea odio autem vulputate ex. Cu usu mucius iisque voluptua. Sit maiorum propriae at, ea cum \ac{API} primis intellegat. Hinc cotidieque reprehendunt eu nec. Autem timeam deleniti usu id, in nec nibh altera.
+%LPHE is responsible for providing, developing, qualifying, and testing the Silicon Photo-Multipliers (\ac{SiPM}) employed in the SciFi tracker. \ac{SiPMs} are used to readout the light emitted by the fibre mats in the tracker.\\ 
